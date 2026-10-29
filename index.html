@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4f8f7">
+<title>বাংলা ২য় পত্র · Based On TEST</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+:root{--mint:#b8f5dc;--yel:#fff3a8;--gold:#f2c94c;--turq:#14b8a6;--cy:#00bcd4;--deep:#064a52;--ink:#0b5560;--glass:rgba(255,255,255,.7)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Hind Siliguri',sans-serif;color:var(--deep);background:linear-gradient(180deg,#f2fffa,#dcfbf3 35%,#f9fff0 62%,#d4f6f4);overflow-x:hidden;line-height:1.8}
+body:not(.live) main{height:100svh;overflow:hidden}
+.serif{font-family:'Tiro Bangla',serif}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+.bg{position:fixed;inset:0;z-index:-2;overflow:hidden}
+.bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:drift 16s ease-in-out infinite alternate}
+.bg i:nth-child(1){width:60vw;height:60vw;background:#8df0d6;top:-15vw;left:-15vw}
+.bg i:nth-child(2){width:55vw;height:55vw;background:#8eeaf4;bottom:5vh;right:-20vw;animation-delay:-6s}
+.bg i:nth-child(3){width:38vw;height:38vw;background:#fff1a0;top:40vh;left:28vw;opacity:.5;animation-delay:-10s}
+@keyframes drift{to{transform:translate(8vw,6vh) scale(1.2)}}
+.grid{position:fixed;inset:0;z-index:-2;opacity:.35;background-image:linear-gradient(#14b8a620 1px,transparent 1px),linear-gradient(90deg,#14b8a620 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:radial-gradient(ellipse at 50% 35%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse at 50% 35%,#000 10%,transparent 75%);animation:gm 12s linear infinite}
+@keyframes gm{to{background-position:0 46px}}
+.bub{position:fixed;bottom:-40px;border-radius:50%;border:2px solid #14b8a644;background:#ffffff55;z-index:-1;animation:bu linear infinite}
+@keyframes bu{to{transform:translateY(-115vh) translateX(30px)}}
+.prog{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,#14b8a6,#00bcd4,#f2c94c);z-index:60}
+
+/* ===== INTRO ===== */
+#intro{position:fixed;inset:0;z-index:100;background:linear-gradient(180deg,#a6f3e0 0%,#dffcf5 52%,#fff6c4 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-bottom:240px;transition:opacity .8s,visibility .8s;overflow:hidden}
+#intro.gone{opacity:0;visibility:hidden}
+#intro.s1{animation:sh1 .12s infinite}#intro.s2{animation:sh2 .07s infinite}
+@keyframes sh1{25%{transform:translate(1px,-1px)}75%{transform:translate(-1px,1px)}}
+@keyframes sh2{25%{transform:translate(3px,-2px)}50%{transform:translate(-3px,2px)}75%{transform:translate(2px,3px)}}
+.stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 20% 30%,#fff,transparent),radial-gradient(3px 3px at 70% 20%,#fff,transparent),radial-gradient(2px 2px at 40% 12%,#f2c94c,transparent),radial-gradient(2px 2px at 85% 40%,#fff,transparent),radial-gradient(2px 2px at 10% 55%,#14b8a6,transparent);animation:twk 2s infinite alternate}
+@keyframes twk{to{opacity:.35}}
+#ic{position:absolute;inset:0;width:100%;height:100%;z-index:3}
+.sun{position:absolute;left:50%;bottom:-70vw;width:min(90vw,520px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,#fffbe0 0,#ffe27a 35%,#ffd86b66 55%,transparent 72%);transition:bottom 2.4s cubic-bezier(.2,.6,.3,1)}
+.sun.rise{bottom:8vh}
+.pad{position:absolute;left:0;right:0;bottom:0;height:11%;background:linear-gradient(180deg,transparent,#7fe8cfaa 60%,#4fd6c0);z-index:1}
+.pad::after{content:"";position:absolute;left:50%;top:38%;width:170px;height:8px;margin-left:-85px;border-radius:6px;background:#0b5560}
+#rocket{position:absolute;bottom:7%;left:50%;width:96px;margin-left:-48px;z-index:2;transition:transform 2.2s cubic-bezier(.6,0,.95,.5)}
+#rocket svg{width:100%;display:block;overflow:visible}
+#rocket.ig svg{animation:rum .06s infinite}
+@keyframes rum{25%{transform:translate(2px,-1px)}75%{transform:translate(-2px,1px)}}
+#rocket.fly{transform:translateY(-140vh)}
+#rocket .fl{opacity:0;transform-origin:50% 0}
+#rocket.ig .fl{opacity:1;animation:fl .1s infinite alternate}
+#rocket.fly .fl{transform:scaleY(1.9)}
+@keyframes fl{to{transform:scaleY(1.45)}}
+.speed{position:absolute;inset:0;opacity:0;z-index:2;transition:opacity .6s;background:repeating-linear-gradient(90deg,transparent 0 21px,rgba(255,255,255,.9) 21px 23px,transparent 23px 49px),repeating-linear-gradient(90deg,transparent 0 33px,rgba(20,184,166,.5) 33px 35px,transparent 35px 71px);-webkit-mask-image:repeating-linear-gradient(180deg,#000 0 90px,transparent 90px 230px);mask-image:repeating-linear-gradient(180deg,#000 0 90px,transparent 90px 230px);-webkit-mask-size:100% 230px;mask-size:100% 230px;animation:spd .2s linear infinite}
+.speed.on{opacity:.8}
+@keyframes spd{to{-webkit-mask-position:0 230px;mask-position:0 230px}}
+#cdw{position:absolute;top:30%;left:50%;width:190px;height:190px;margin-left:-95px;display:none;place-items:center;z-index:4}
+#cdw.on{display:grid}
+#cdw svg{position:absolute;inset:0;transform:rotate(-90deg)}
+#cdw circle{fill:none;stroke-width:8;stroke-linecap:round}
+#cdw .b{stroke:#ffffffa0}#cdw .f{stroke:#0fa597;stroke-dasharray:578;stroke-dashoffset:578}
+#cdw.t .f{animation:ring .6s linear forwards}
+@keyframes ring{to{stroke-dashoffset:0}}
+#cd{font:800 100px/1 'Sora';color:#0b8579}
+#cd.pop{animation:cdp .6s ease-out}
+@keyframes cdp{0%{transform:scale(1.8);opacity:0}30%{transform:scale(1);opacity:1}100%{transform:scale(.85);opacity:.6}}
+#msg{position:absolute;top:calc(30% + 200px);left:0;right:0;z-index:4;font:700 1.3rem 'Hind Siliguri';color:#0b5560;text-shadow:0 2px 0 #fff}
+#start{position:relative;z-index:5;padding:14px 20px}
+.tag{display:inline-block;font:400 1.05rem 'Chewy',cursive;letter-spacing:.5px;color:#0b8579;background:#ffffffb8;border:1px solid #fff;border-radius:99px;padding:3px 16px;margin-bottom:12px}
+.go{position:relative;font:700 1.2rem 'Hind Siliguri';color:#fff;border:0;border-radius:99px;padding:15px 32px;background:linear-gradient(135deg,#14b8a6,#00bcd4);box-shadow:0 12px 30px -8px #0aa6b0,inset 0 2px 0 #ffffff80;cursor:pointer;animation:pulse 1.8s infinite;display:inline-flex;gap:10px;align-items:center}
+@keyframes pulse{50%{transform:scale(1.06);box-shadow:0 0 0 14px #14b8a622,0 12px 30px -8px #0aa6b0}}
+.go .arr{animation:nudge 1s ease-in-out infinite alternate}
+@keyframes nudge{to{transform:translateX(6px)}}
+#flash{position:fixed;inset:0;background:#fff;z-index:120;opacity:0;pointer-events:none}
+#flash.on{animation:fa 1s}
+@keyframes fa{20%{opacity:1}100%{opacity:0}}
+
+/* ===== PAGE ===== */
+main{max-width:860px;margin:0 auto;padding:0 14px 30px}
+.glass{position:relative;background:var(--glass);border:1px solid #ffffffe6;border-radius:26px;backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 20px 50px -20px rgba(0,130,120,.35),inset 0 1px 0 #fff}
+.rot::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--a),transparent 0 60%,#14e0c4 78%,#f2c94c 92%,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask-composite:exclude;animation:rt 5s linear infinite;pointer-events:none}
+@keyframes rt{to{--a:360deg}}
+[data-fx]{opacity:0;transition:opacity .8s,transform .9s cubic-bezier(.2,.8,.2,1),filter .8s;transition-delay:var(--d,0s)}
+[data-fx=rise]{transform:translateY(46px)}[data-fx=l]{transform:translateX(-50px)}[data-fx=r]{transform:translateX(50px)}[data-fx=zoom]{transform:scale(.75)}[data-fx=blur]{filter:blur(12px);transform:translateY(20px)}
+[data-fx].in{opacity:1;transform:none;filter:none}
+
+/* hero */
+[hidden]{display:none!important}
+#hero{padding:44px 0 18px;text-align:center}
+.top{padding:30px 18px 22px}
+.cwrap{opacity:0;width:min(56vw,210px);margin:6px auto 22px}
+body.live .cwrap{animation:cin 1.5s cubic-bezier(.2,1.15,.3,1) .35s forwards}
+@keyframes cin{0%{opacity:0;transform:scale(.15) rotate(-220deg);filter:blur(12px)}60%{opacity:1;filter:blur(0)}100%{opacity:1;transform:none;filter:none}}
+.circle{position:relative;width:100%;aspect-ratio:1;animation:bob 4s ease-in-out infinite}
+.circle>*{position:absolute;animation:morph 7s ease-in-out infinite}
+.circle .glow{inset:-22px;background:conic-gradient(from var(--a),#14e0c4,#f2c94c,#00bcd4,#14e0c4);filter:blur(18px);opacity:.55;animation:morph 7s ease-in-out infinite,rt 5s linear infinite}
+.circle .ring{inset:-11px;background:conic-gradient(from var(--a),#14e0c4,#fff3a8,#00bcd4,#f2c94c,#14e0c4);animation:morph 7s ease-in-out infinite,rt 4s linear infinite}
+.circle .im{inset:0;overflow:hidden;border:6px solid #fff;background:linear-gradient(135deg,#9bf2e0,#fff3a8);display:grid;place-items:center;font-size:4rem;box-shadow:0 14px 34px -10px #0a8f84}
+.circle img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@keyframes morph{0%,100%{border-radius:50%}20%{border-radius:60% 40% 52% 48%/46% 58% 42% 54%}40%{border-radius:42% 58% 40% 60%/58% 42% 60% 40%}60%{border-radius:54% 46% 62% 38%/40% 56% 44% 60%}80%{border-radius:38% 62% 48% 52%/54% 40% 60% 46%}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.grp{font:400 clamp(2.1rem,10vw,3.6rem)/1.2 'Chewy',cursive;letter-spacing:1px;text-shadow:0 3px 0 #fff,0 8px 18px #14b8a655}
+.grp span{display:inline-block;color:#0e9f8f;animation:wob 2.6s ease-in-out infinite}
+.grp span:nth-child(4n+2){color:#00a8c6}.grp span:nth-child(4n+3){color:#e0a800}.grp span:nth-child(4n){color:#12a66e}
+@keyframes wob{50%{transform:translateY(-5px) rotate(-3deg)}}
+.sub{margin-top:6px;color:#2d8a86;font-weight:600}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 22px}
+.tab{font:700 1.05rem 'Hind Siliguri';color:#0b7f73;background:#ffffffcc;border:1.5px solid #bdeee3;border-radius:20px;padding:14px 8px;cursor:pointer;box-shadow:0 10px 24px -16px #007a70;transition:.3s}
+.tab.on{color:#fff;background:linear-gradient(135deg,#14b8a6,#00bcd4);border-color:transparent;box-shadow:0 14px 28px -12px #0aa6b0}
+.panel:not([hidden]){animation:pf .5s ease-out}
+@keyframes pf{from{opacity:0;transform:translateY(14px)}}
+.soon{text-align:center;padding:34px 18px;margin-bottom:24px}
+.soon .e{font-size:2.6rem;display:block;animation:bob 3s ease-in-out infinite}
+.soon b{display:block;font:400 1.5rem 'Tiro Bangla',serif;color:#0b7f73}
+.soon small{color:#4f8f93;font-weight:600}
+/* chips */
+.chips{position:sticky;top:8px;z-index:30;display:flex;gap:6px;justify-content:center;margin:0 auto 22px;padding:7px;border-radius:99px;background:#ffffffc4;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid #fff;box-shadow:0 10px 30px -14px #00877a88;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;text-decoration:none;color:#0b7f73;font-weight:700;font-size:.88rem;padding:5px 14px;border-radius:99px;background:#e6fff6;transition:.25s}
+.chips a.on,.chips a:hover{background:linear-gradient(135deg,#14b8a6,#00bcd4);color:#fff;transform:translateY(-2px)}
+
+/* questions */
+.q{--c1:#14b8a6;--c2:#e6fff6;--c3:#b8f5dc;margin-bottom:24px;padding:20px 16px 18px;overflow:hidden}
+.q::before{content:"";position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,#fff,transparent 70%);animation:gl 5s ease-in-out infinite alternate}
+@keyframes gl{to{transform:scale(1.3);opacity:.6}}
+.q:nth-of-type(1){background:linear-gradient(135deg,#e1fcf4,#f6fffc)}
+.q.c2{--c1:#e0a800;--c2:#fff8d2;--c3:#ffe98a;background:linear-gradient(135deg,#fff8d2,#fffdf0)}
+.q.c3{--c1:#00a8c6;--c2:#e0f9fd;--c3:#a8ecf6;background:linear-gradient(135deg,#e0f9fd,#f5feff)}
+.q.c4{--c1:#12a66e;--c2:#e2fbec;--c3:#a9efc9;background:linear-gradient(135deg,#e2fbec,#f6fffa)}
+.q.c5{--c1:#c99700;--c2:#fff4c4;--c3:#ffe27a;background:linear-gradient(135deg,#fff4c4,#f0fff6)}
+.q.c6{--c1:#0e9f8f;--c2:#d6f8f1;--c3:#9deadb;background:linear-gradient(135deg,#d6f8f1,#e2fbff)}
+.qh{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;position:relative;z-index:1}
+.qn{flex:none;width:50px;height:50px;border-radius:16px;display:grid;place-items:center;font:700 1.5rem 'Hind Siliguri';color:#fff;background:linear-gradient(135deg,var(--c1),color-mix(in srgb,var(--c1) 60%,#fff));box-shadow:0 10px 20px -10px var(--c1),inset 0 2px 0 #fff8;animation:fy 3.4s ease-in-out infinite}
+.qh h4{flex:1;font-size:1.1rem;font-weight:700;line-height:1.5;padding-top:2px;color:#064a52}
+.mk{flex:none;font:800 .85rem 'Sora';color:var(--c1);background:#fff;border:1.5px solid var(--c3);border-radius:99px;padding:2px 12px;margin-top:4px}
+.opt{position:relative;z-index:1;display:flex;gap:10px;align-items:flex-start;background:#ffffffe0;border:1px solid var(--c3);border-radius:16px;padding:12px 14px;box-shadow:0 8px 18px -14px #007a70;transition:transform .3s,box-shadow .3s;overflow:hidden}
+.opt:hover{transform:translateX(5px);box-shadow:0 12px 24px -12px #007a70}
+.opt::after{content:"";position:absolute;top:0;bottom:0;width:50px;left:-80px;background:linear-gradient(100deg,transparent,#fffa,transparent);transform:skewX(-20deg);animation:shn 5s infinite;animation-delay:var(--sd,0s)}
+@keyframes shn{to{left:115%}}
+.opt .l{flex:none;min-width:30px;height:30px;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:.9rem;color:#fff;background:linear-gradient(135deg,var(--c1),color-mix(in srgb,var(--c1) 55%,#fff))}
+.opt p,.opt .t{flex:1;font-weight:500;font-size:1.02rem}
+.opt+.opt,.or+.opt,.opt+.or{margin-top:10px}
+.or{position:relative;z-index:1;text-align:center;margin:10px 0}
+.or span{display:inline-block;font-weight:700;font-size:.82rem;color:var(--c1);background:#fff;border:1.5px dashed var(--c3);border-radius:99px;padding:0 16px;animation:pop 2.2s ease-in-out infinite}
+@keyframes pop{50%{transform:scale(1.1)}}
+.para{font:400 1.02rem/2 'Tiro Bangla',serif;text-align:justify;color:#07474f}
+.poem{font:400 1.05rem/2 'Tiro Bangla',serif;text-align:center;font-style:italic;color:#07474f;background:linear-gradient(135deg,#fffbe0,#e6fff6)}
+.quote{font:400 1.2rem/1.9 'Tiro Bangla',serif;text-align:center;color:#07474f;flex:1}
+.quote::before{content:"❝";display:block;font-size:1.8rem;line-height:1;color:var(--c1)}
+.sublab{position:relative;z-index:1;font-weight:700;margin:2px 0 8px;color:#064a52}
+
+.end{text-align:center;padding:22px 16px;margin:6px 0 20px}
+.end p{font:400 1.1rem/1.9 'Tiro Bangla',serif;color:var(--ink)}
+.gold{font-weight:700;background:linear-gradient(100deg,#b88a1c,#f6d36b,#c99a2b,#fff0b8,#b88a1c);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 4s linear infinite}
+footer{text-align:center;padding:6px 10px calc(30px + env(safe-area-inset-bottom));color:#2d8a86;font-size:.9rem}
+footer b{font-family:'Chewy',cursive;font-weight:400;font-size:1.1rem;color:#0e9f8f}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}[data-fx]{opacity:1!important;transform:none!important;filter:none!important}}
+@media print{#intro,#fx,.bg,.grid,.bub,.prog,.chips,.hint,#again{display:none!important}body:not(.live) main{height:auto;overflow:visible}[data-fx]{opacity:1!important;transform:none!important;filter:none!important}}
+
+/* ===== LIGHT + COMPACT OVERRIDES ===== */
+:root{--glass:#fff;--deep:#1f3a3d;--ink:#2b5558}
+body{background:#f4f8f7}
+.bg,.grid,#bubs{display:none!important}
+main{max-width:720px;padding:0 12px 24px}
+.glass{background:#fff;border:1px solid #e3ecea;border-radius:18px;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 6px 18px -12px rgba(20,60,60,.25)}
+.rot::after{display:none}
+#hero{padding:26px 0 12px}
+.top{padding:20px 16px 16px}
+.cwrap{width:min(38vw,130px);margin:2px auto 14px}
+.circle>*{animation:none!important}
+.circle{animation:none}
+.circle .glow{display:none}
+.circle .ring{inset:-5px;background:#d9efea;border-radius:50%}
+.circle .im{border:4px solid #fff;border-radius:50%;background:#eef7f5;box-shadow:0 4px 12px -6px rgba(20,60,60,.35)}
+.grp{font:700 clamp(1.5rem,6.5vw,2.1rem)/1.3 'Hind Siliguri',sans-serif;letter-spacing:.2px;color:#14606a;text-shadow:none}
+.grp::after{content:"";display:block;width:54px;height:4px;border-radius:4px;margin:8px auto 0;background:linear-gradient(90deg,#14b8a6,#f2c94c)}
+.sub{font-size:.9rem;color:#5b8a88;margin-top:8px}
+.tabs{gap:8px;margin-bottom:14px}
+.tab{padding:9px 6px;font-size:.92rem;border-radius:12px;background:#fff;border:1px solid #d7e8e4;box-shadow:none}
+.tab.on{background:#14a89a;color:#fff;border-color:#14a89a}
+.chips{padding:5px;margin-bottom:14px;background:#fffffff2;box-shadow:0 4px 14px -10px #0a6}
+.chips a{font-size:.8rem;padding:3px 11px;background:#eef7f5}
+.q{margin-bottom:14px;padding:14px 14px 12px}
+.q::before{display:none}
+.q:nth-of-type(n),.q.c2,.q.c3,.q.c4,.q.c5,.q.c6{background:#fff}
+.qn{width:34px;height:34px;border-radius:11px;font-size:1.05rem;animation:none;box-shadow:none}
+.qh{gap:10px;margin-bottom:8px}
+.qh h4{font-size:.98rem;padding-top:4px}
+.mk{font-size:.75rem;padding:0 9px}
+.opt{padding:7px 11px;border-radius:11px;box-shadow:none;gap:8px;background:#f8fbfa}
+.opt::after{display:none}
+.opt:hover{transform:none;box-shadow:none}
+.opt .l{min-width:24px;height:24px;border-radius:8px;font-size:.78rem}
+.opt p,.opt .t{font-size:.92rem;line-height:1.55}
+.opt+.opt{margin-top:7px}
+.quote{font-size:1rem;line-height:1.7}.quote::before{font-size:1.3rem}
+.end{padding:14px;margin:4px 0 14px}.end p{font-size:1rem}
+.end .go{box-shadow:none;animation:none}
+.go{box-shadow:0 6px 16px -8px #0aa6b0}
+
+/* ===== MCQ GRID ===== */
+.mhead{text-align:center;margin:0 0 12px}
+.mhead b{display:block;font-size:1.02rem;color:#14606a}
+.mhead small{color:#6d9593;font-weight:600;font-size:.8rem}
+.mgrid{display:grid;grid-template-columns:1fr;grid-auto-rows:auto;gap:20px;margin-bottom:22px}
+.mc{display:flex;flex-direction:column;background:#fff;border:1px solid #dfeae8;border-radius:20px;padding:22px 20px;min-height:0}
+.mq{display:flex;gap:14px;font-weight:700;font-size:1.5rem;line-height:1.65;color:#1f3a3d;margin-bottom:18px}
+.mq i{flex:none;font-style:normal;min-width:46px;height:46px;border-radius:12px;background:#e4f3f0;color:#0e7c70;display:grid;place-items:center;font-size:1.35rem}
+.mo{display:flex;gap:15px;align-items:flex-start;font-size:1.3rem;line-height:1.65;padding:13px 16px;border-radius:12px;margin-top:10px;color:#3a5557}
+.mo b{flex:none;font-weight:700;color:#7aa3a0}
+.mo.ok{background:#16a37f;color:#fff;font-weight:700}
+.mo.ok b{color:#d6fff2}
+.mo.bad{background:#e5484d;color:#fff;font-weight:700}
+.mo.bad b{color:#ffe0e1}
+.mo em{font-style:normal;font-size:.72rem;font-weight:700;margin-left:auto;flex:none;background:#ffffff33;border-radius:99px;padding:1px 10px;align-self:center}
+.mo.pick{cursor:pointer;background:#f3f8f7;border:1.5px solid transparent;transition:background .15s,border-color .15s}
+.mo.pick:active{transform:scale(.99)}
+.mo.pick.sel{background:#e0f4f1;border-color:#14a89a;color:#0b5560;font-weight:700}
+.mo.pick.sel b{color:#0e7c70}
+.mc.miss{border-color:#e5484d;animation:shk .4s}
+@keyframes shk{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.mbtn{font:700 1rem 'Hind Siliguri',sans-serif;border:0;border-radius:14px;padding:13px 20px;cursor:pointer;color:#fff;background:linear-gradient(135deg,#14b8a6,#00bcd4)}
+.mbtn.alt{background:#fff;color:#0b7f73;border:1.5px solid #bdeee3}
+.mbtn.red{background:#fff;color:#c0343a;border:1.5px solid #f2b8ba}
+.mbtn.on{background:#14a89a;color:#fff;border-color:#14a89a}
+.mbtn:disabled{opacity:.5}
+.mchoice{text-align:center;padding:26px 18px;margin-bottom:20px}
+.mchoice b{display:block;font-size:1.25rem;color:#14606a;margin-bottom:4px}
+.mchoice p{color:#5b8a88;margin-bottom:16px;font-size:.92rem}
+.mrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.mrow .mbtn{flex:1 1 170px}
+.ebar{position:sticky;top:8px;z-index:30;display:flex;align-items:center;gap:10px;background:#fffffff2;border:1px solid #d7e8e4;border-radius:16px;padding:10px 12px;margin-bottom:16px;box-shadow:0 6px 18px -10px rgba(20,60,60,.35)}
+.ebar .cnt{flex:1;font-weight:700;color:#14606a;font-size:.95rem}
+.ebar .pb{height:6px;background:#e4f3f0;border-radius:6px;margin-top:5px;overflow:hidden}
+.ebar .pb i{display:block;height:100%;width:0;background:linear-gradient(90deg,#14b8a6,#f2c94c);transition:width .25s}
+.ebar .mbtn{padding:9px 16px;font-size:.92rem}
+.mres{text-align:center;padding:24px 16px;margin-bottom:20px}
+.mres .sc{font:800 3rem/1.1 'Sora',sans-serif;color:#0e7c70}
+.mres .sc small{font-size:1.3rem;color:#7aa3a0}
+.mres p{margin:6px 0 16px;color:#3a5557;font-weight:600}
+.mnone{text-align:center;padding:30px 16px;font-weight:700;color:#0e7c70;background:#fff;border:1px solid #dfeae8;border-radius:20px}
+.mtop{display:flex;justify-content:center;margin-bottom:16px}
+@media(min-width:600px){.mc{padding:28px}.mq{font-size:1.7rem}.mo{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas><div class="prog" id="prog"></div><div id="flash"></div>
+<div class="bg"><i></i><i></i><i></i></div><div class="grid"></div><div id="bubs"></div>
+
+<!-- ===== ROCKET INTRO ===== -->
+<div id="intro">
+  <div class="stars"></div><div class="sun" id="sun"></div><div class="speed" id="speed"></div><div class="pad"></div>
+  <canvas id="ic"></canvas>
+  <div id="start">
+    <div class="tag">Based On TEST !</div>
+    <h1 class="serif" style="font-weight:400;font-size:clamp(1.8rem,8vw,2.8rem);line-height:1.3;margin-bottom:6px">বাংলা দ্বিতীয় পত্র</h1>
+    <p style="color:#2d8a86;margin-bottom:18px">রকেটে চড়ে সোজা প্রশ্নপত্রে...</p>
+    <button class="go" id="go"><span>🚀</span><span>বাংলা ২য় প্রশ্ন</span><span class="arr">➜</span></button>
+  </div>
+  <div id="cdw"><svg viewBox="0 0 200 200"><circle class="b" cx="100" cy="100" r="92"/><circle class="f" cx="100" cy="100" r="92"/></svg><div id="cd"></div></div>
+  <div id="msg"></div>
+  <div id="rocket"><svg viewBox="0 0 90 190"><defs><linearGradient id="rb" x1="0" x2="1"><stop offset="0" stop-color="#bff7ea"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#8fe9db"/></linearGradient><linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6b0"/><stop offset=".4" stop-color="#ffb938"/><stop offset="1" stop-color="#ff7a2e" stop-opacity="0"/></linearGradient></defs>
+    <g class="fl"><path d="M30 128q15 90 30 0z" fill="url(#fg)"/><path d="M38 128q7 45 14 0z" fill="#fff"/></g>
+    <path d="M45 4C70 30 72 80 66 128H24C18 80 20 30 45 4z" fill="url(#rb)" stroke="#14b8a6" stroke-width="2"/>
+    <path d="M45 4C58 20 62 40 62 60H28c0-20 4-40 17-56z" fill="#14b8a6" opacity=".85"/>
+    <circle cx="45" cy="78" r="11" fill="#00bcd4" stroke="#fff" stroke-width="4"/>
+    <path d="M24 100L6 138l18-8zM66 100l18 38-18-8z" fill="#14b8a6"/><rect x="36" y="118" width="18" height="12" rx="3" fill="#f2c94c"/></svg></div>
+</div>
+
+<main id="main">
+<!-- HERO -->
+<section id="hero">
+  <div class="glass rot top" data-fx="zoom">
+    <div class="cwrap"><div class="circle"><div class="glow"></div><div class="ring"></div><div class="im">📚<img id="aimg" alt="Based On TEST" referrerpolicy="no-referrer"></div></div></div>
+    <h1 class="grp" id="grp" aria-label="Based On TEST !"></h1>
+    <p class="sub">বাংলা ২য় পত্র · প্রশ্নপত্র</p>
+  </div>
+</section>
+
+<div class="tabs" data-fx="rise">
+  <button class="tab on" id="tw">✍️ Writing Part</button>
+  <button class="tab" id="tm">📝 MCQ Part</button>
+</div>
+
+<div class="panel" id="pw">
+<nav class="chips" id="chips">
+  <a href="#q1">অনুচ্ছেদ</a><a href="#q2">পত্র</a><a href="#q3">সারাংশ</a><a href="#q4">ভাবসম্প্রসারণ</a><a href="#q5">প্রতিবেদন</a><a href="#q6">প্রবন্ধ</a>
+</nav>
+
+<section class="glass q" id="q1" data-fx="rise">
+  <div class="qh"><div class="qn">১</div><h4>অনুচ্ছেদ:</h4><span class="mk">১০</span></div>
+  <div class="opt" data-fx="l"><span class="l">ক</span><span class="t">জাতীয় পতাকা</span></div>
+  <div class="opt" data-fx="r" style="--sd:1.5s"><span class="l">খ</span><span class="t">বৃক্ষরোপণ</span></div>
+</section>
+
+<section class="glass q c2" id="q2" data-fx="rise">
+  <div class="qh"><div class="qn">২</div><h4>পত্র / আবেদনপত্র:</h4><span class="mk">১০</span></div>
+  <div class="opt" data-fx="l"><span class="l">ক</span><span class="t">মর্মান্তিক সড়ক দুর্ঘটনার বর্ণনা দিয়ে বন্ধুকে চিঠি</span></div>
+  <div class="opt" data-fx="r" style="--sd:1.5s"><span class="l">খ</span><span class="t">দরিদ্র তহবিল হতে আর্থিক সাহায্য চেয়ে আবেদনপত্র</span></div>
+</section>
+
+<section class="glass q c3" id="q3" data-fx="rise">
+  <div class="qh"><div class="qn">৩</div><h4>সারাংশ / সারমর্ম:</h4><span class="mk">১০</span></div>
+  <div class="opt" data-fx="l"><span class="l">ক</span><span class="t">সারাংশ : অভ্যাস ভয়ানক জিনিস…</span></div>
+  <div class="opt" data-fx="r" style="--sd:1.5s"><span class="l">খ</span><span class="t">সারমর্ম : সার্থক জনম আমার জন্মেইছি এই দেশে…</span></div>
+</section>
+
+<section class="glass q c4" id="q4" data-fx="rise">
+  <div class="qh"><div class="qn">৪</div><h4>ভাবসম্প্রসারণ:</h4><span class="mk">১০</span></div>
+  <div class="opt" data-fx="l"><span class="l">ক</span><p class="quote">অন্যায় যে করে আর অন্যায় যে সহে<br>তব ঘৃণা যেন তারে তৃণসম দহে</p></div>
+  <div class="opt" data-fx="r" style="--sd:1.5s"><span class="l">খ</span><p class="quote" style="font-size:1.12rem">মানুষ বাঁচে তার কর্মের মধ্যে, বয়সের মধ্যে নয়।</p></div>
+</section>
+
+<section class="glass q c5" id="q5" data-fx="rise">
+  <div class="qh"><div class="qn">৫</div><h4>প্রতিবেদন:</h4><span class="mk">১০</span></div>
+  <div class="opt" data-fx="l"><span class="l">ক</span><span class="t">শহীদ দিবস ও আন্তর্জাতিক মাতৃভাষা দিবস উদযাপন</span></div>
+  <div class="opt" data-fx="r" style="--sd:1.5s"><span class="l">খ</span><span class="t">মাদককে না বলুন</span></div>
+</section>
+
+<section class="glass q c6" id="q6" data-fx="rise">
+  <div class="qh"><div class="qn">৬</div><h4>প্রবন্ধ:</h4><span class="mk">২০</span></div>
+  <div class="opt" data-fx="l"><span class="l">ক</span><span class="t">বাংলাদেশের প্রাকৃতিক দুর্যোগ</span></div>
+  <div class="opt" data-fx="r" style="--sd:1s"><span class="l">খ</span><span class="t">বাংলাদেশের পর্যটন শিল্প</span></div>
+  <div class="opt" data-fx="l" style="--sd:2s"><span class="l">গ</span><span class="t">মানবকল্যাণে বিজ্ঞান</span></div>
+</section>
+</div>
+
+<div class="panel" id="pm" hidden>
+  <div class="mhead"><b>বহুনির্বাচনী অভীক্ষা · ৩০টি</b><small id="msmall"></small></div>
+
+  <div class="glass mchoice" id="mchoice">
+    <b>কীভাবে শুরু করবেন?</b>
+    <p>পরীক্ষায় সময়ের কোনো সীমা নেই · ৩০টি প্রশ্নের সবগুলোর উত্তর দিতে হবে</p>
+    <div class="mrow">
+      <button class="mbtn" id="bexam">📝 পরীক্ষা দিব</button>
+      <button class="mbtn alt" id="bview">👁️ ডাইরেক্ট উত্তর দেখব</button>
+    </div>
+  </div>
+
+  <div class="mtop" id="mtop" hidden><button class="mbtn" id="bexam2">📝 পরীক্ষা দিন</button></div>
+
+  <div class="ebar" id="ebar" hidden>
+    <div class="cnt"><span id="ecnt"></span><div class="pb"><i id="epb"></i></div></div>
+    <button class="mbtn red" id="bquit">বাতিল</button>
+    <button class="mbtn" id="bsub">Submit ✓</button>
+  </div>
+
+  <div class="glass mres" id="mres" hidden>
+    <div class="sc"><span id="rsc"></span><small> / ৩০</small></div>
+    <p id="rmsg"></p>
+    <div class="mrow">
+      <button class="mbtn on" id="rwrong">❌ ভুলগুলো</button>
+      <button class="mbtn alt" id="rall">📋 সব (All)</button>
+      <button class="mbtn alt" id="rre">🔄 Re-Exam</button>
+    </div>
+  </div>
+
+  <div class="mgrid" id="mgrid"></div>
+</div>
+
+<div class="glass end" data-fx="zoom"><p>সবার জন্য <span class="gold">শুভকামনা! 🌟</span></p>
+  <div style="margin-top:14px"><button class="go" id="again" style="font-size:1rem;padding:12px 24px"><span>🚀</span><span>আবার রকেট</span></button></div></div>
+<footer><b>Based On TEST !</b> 😌 · ডিজিটাল প্রশ্নপত্র · ২০২৬</footer>
+</main>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
+const rnd=(a,b)=>a+Math.random()*(b-a),pick=a=>a[Math.random()*a.length|0];
+const COL=['#14b8a6','#00bcd4','#f2c94c','#fff0a0','#8df0d6','#ffffff','#b8f5dc'];
+
+/* group title letters */
+$('#grp').textContent='Based On TEST !';
+
+/* bubbles */
+for(let i=0;i<14;i++){const b=document.createElement('div');b.className='bub';const s=rnd(10,34);b.style.cssText=`left:${rnd(0,100)}%;width:${s}px;height:${s}px;animation-duration:${rnd(9,19)}s;animation-delay:${-rnd(0,15)}s`;$('#bubs').appendChild(b)}
+
+/* confetti */
+const cv=$('#fx'),cx=cv.getContext('2d');let W,H,P=[],run=false,dpr=Math.min(devicePixelRatio||1,2);
+function rs(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}rs();addEventListener('resize',rs);
+function confetti(x,y,n=70,sp=1){for(let i=0;i<n;i++){const a=rnd(0,6.28),s=rnd(3,12)*sp;P.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-6,w:rnd(6,11),h:rnd(4,7),r:rnd(0,6),vr:rnd(-.3,.3),c:pick(COL),l:1,d:rnd(.005,.011)})}if(!run){run=true;requestAnimationFrame(tick)}}
+function tick(){cx.clearRect(0,0,W,H);P=P.filter(p=>p.l>0&&p.y<H+40);
+for(const p of P){p.l-=p.d;p.x+=p.vx;p.y+=p.vy;p.vy+=.28;p.vx*=.985;p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.globalAlpha=Math.min(1,p.l*2);cx.fillStyle=p.c;cx.scale(1,Math.abs(Math.cos(p.r*2))+.2);cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()}
+cx.globalAlpha=1;if(P.length)requestAnimationFrame(tick);else run=false}
+
+/* rocket intro */
+const ic=$('#ic'),ix=ic.getContext('2d');let IP=[],irun=false,ign=false,fly=false;
+function irs(){ic.width=innerWidth;ic.height=innerHeight}irs();addEventListener('resize',irs);
+function iemit(){const r=$('#rocket').getBoundingClientRect(),x=r.left+r.width/2,y=r.bottom-14;
+ for(let k=0;k<(fly?4:2);k++)IP.push({f:1,x:x+rnd(-7,7),y,vx:rnd(-1,1),vy:rnd(3,7)*(fly?1.5:.7),r:rnd(7,15),g:.97,l:1,d:rnd(.03,.05)});
+ for(let k=0;k<(fly?3:4);k++)IP.push({f:0,x:x+rnd(-12,12),y:y+(fly?0:30),vx:fly?rnd(-2,2):rnd(-7,7)*(Math.random()<.5?1:-1)*.7,vy:fly?rnd(1,3):rnd(-.4,.6),r:rnd(14,26),g:1.035,l:1,d:rnd(.008,.014)});
+ if(IP.length>420)IP.splice(0,IP.length-420)}
+function itick(){if(!irun)return;ix.clearRect(0,0,ic.width,ic.height);if(ign)iemit();
+ IP=IP.filter(p=>p.l>0);for(const p of IP){p.x+=p.vx;p.y+=p.vy;p.r*=p.g;p.l-=p.d;
+  if(p.f){ix.globalAlpha=Math.max(0,p.l);ix.fillStyle='#ffb938';ix.beginPath();ix.arc(p.x,p.y,p.r,0,6.3);ix.fill();ix.fillStyle='#fff6b0';ix.beginPath();ix.arc(p.x,p.y,p.r*.5,0,6.3);ix.fill()}
+  else{ix.globalAlpha=Math.max(0,p.l*.75);ix.fillStyle='#fff';ix.beginPath();ix.arc(p.x,p.y,p.r,0,6.3);ix.fill();ix.globalAlpha=Math.max(0,p.l*.25);ix.strokeStyle='#7fe8cf';ix.lineWidth=2;ix.stroke()}}
+ ix.globalAlpha=1;requestAnimationFrame(itick)}
+function resetIntro(){$('#rocket').classList.remove('ig','fly');$('#sun').classList.remove('rise');$('#speed').classList.remove('on');$('#intro').classList.remove('s1','s2');$('#cdw').classList.remove('on','t');$('#msg').textContent='';irun=ign=fly=false;IP=[];ix.clearRect(0,0,ic.width,ic.height)}
+let busy=false;
+function reveal(){$('#intro').classList.add('gone');document.body.classList.add('live');
+ $('#flash').classList.remove('on');void $('#flash').offsetWidth;$('#flash').classList.add('on');
+ if(!RM){confetti(W/2,H*.45,120,1.3);setTimeout(()=>{confetti(W*.2,H*.3,50,1);confetti(W*.8,H*.3,50,1)},500)}
+ setTimeout(resetIntro,1000)}
+function launch(after){if(busy)return;busy=true;$('#start').style.visibility='hidden';
+ if(RM){busy=false;after();return}
+ const R=$('#rocket'),cdw=$('#cdw'),cd=$('#cd'),msg=$('#msg'),I=$('#intro');R.style.transition='none';R.classList.remove('fly');void R.offsetWidth;R.style.transition='';
+ irun=true;requestAnimationFrame(itick);cdw.classList.add('on');
+ const T={3:'ইঞ্জিন চেক ✓',2:'ইগনিশন 🔥',1:'সব প্রস্তুত!'};let n=3;
+ (function step(){if(n>0){cd.textContent=bn(n);cd.classList.remove('pop');cdw.classList.remove('t');void cd.offsetWidth;cd.classList.add('pop');cdw.classList.add('t');msg.textContent=T[n];
+   if(n===2){R.classList.add('ig');ign=true;I.classList.add('s1')}if(n===1){I.classList.remove('s1');I.classList.add('s2')}
+   n--;setTimeout(step,600)}
+  else{cdw.classList.remove('on');msg.textContent='লিফটঅফ! 🚀';fly=true;R.classList.add('fly');$('#sun').classList.add('rise');$('#speed').classList.add('on');
+   setTimeout(()=>{I.classList.remove('s2');I.classList.add('s1')},900);
+   setTimeout(()=>{busy=false;after()},2000)}})()}
+$('#go').onclick=()=>launch(reveal);
+$('#again').onclick=()=>{scrollTo({top:0});$('#intro').classList.remove('gone');$('#start').style.visibility='hidden';document.body.classList.remove('live');launch(reveal)};
+
+/* scroll reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;t.classList.add('in');io.unobserve(t);}),{threshold:.18});
+document.querySelectorAll('[data-fx]').forEach(el=>io.observe(el));
+
+/* progress + chips */
+const pr=$('#prog'),links=[...document.querySelectorAll('#chips a')],secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{if(pw.hidden)return;pr.style.width=scrollY/Math.max(1,document.body.scrollHeight-innerHeight)*100+'%';
+ let cur=-1;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.45)cur=i});links.forEach((a,i)=>{a.classList.toggle('on',i===cur);if(i===cur)a.scrollIntoView({block:'nearest',inline:'center'})})},{passive:true});
+
+/* circle image */
+const ID='1pWl7nGeR_Yj0nVeGXfmKrAgkbsiiWmJ8',SRC=['https://lh3.googleusercontent.com/d/'+ID+'=w600','https://drive.google.com/thumbnail?id='+ID+'&sz=w600','https://drive.google.com/uc?export=view&id='+ID];let si=0;const im=$('#aimg');
+im.onerror=()=>{if(++si<SRC.length)im.src=SRC[si];else im.style.display='none'};im.src=SRC[0];
+/* mcq render */
+const MCQ=[{"q":"'পাউরুটি' কোন ভাষার শব্দ?","o":["তুর্কি","ফারসি","পর্তুগিজ","আরবি"],"a":2},{"q":"রাজা রামমোহন রায়ের রচিত বাংলা ব্যাকরণের নাম কী?","o":["গৌড়ীয় ব্যাকরণ","মাড়ুড়িয়া ব্যাকরণ","ভাষা ও ব্যাকরণ","বাংলা ব্যাকরণ"],"a":0},{"q":"বাংলা ভাষায় মৌলিক ধ্বনি রয়েছে—","o":["৩৭","৭","১০","৩০"],"a":0},{"q":"কখন চলিত রীতি সাধু রীতির জায়গা দখল করে?","o":["উনিশ শতকের সূচনা নাগাদ","বিশ শতকের সূচনা নাগাদ","একুশ শতকের সূচনা নাগাদ","বিশ শতকের মাঝামাঝি নাগাদ"],"a":1},{"q":"ধ্বনি সৃষ্টিকারী বায়ুপ্রবাহের উৎস হলো—","o":["ফুসফুস","জিভ","শ্বাসনালি","তালু"],"a":0},{"q":"বিশেষ্য ও বিশেষণ পদের সঙ্গে নির্দেশকের ব্যবহার হয়েছে নিচের কোনটিতে?","o":["পণ্ডিতজন","বছরচারেক","মুখখানি","আরেকটি"],"a":2},{"q":"'শ্রমিক' শব্দের শুদ্ধ উচ্চারণ কোনটি?","o":["স্রোমিক্‌","স্রোমিক","স্রোমিক্","স্রোমিক্‌"],"a":3},{"q":"'আকাশে বিদ্যুৎ চমকায়।' এ বাক্যে কোন ধরনের ক্রিয়া ব্যবহৃত হয়েছে?","o":["অকর্মক ক্রিয়া","প্রযোজক ক্রিয়া","যৌগিক ক্রিয়া","নাম ক্রিয়া"],"a":0},{"q":"ধাতুর সঙ্গে কী যুক্ত হয়ে ক্রিয়া হয়?","o":["বিভক্তি","অনুসর্গ","উপসর্গ","প্রত্যয়"],"a":0},{"q":"নিচের কোনটি 'বিরোধ' যোজকের উদাহরণ?","o":["যদি রোদ ওঠে, তবে রওনা দেব","তাকে আসতে বললাম, তবুও এল না","চা না-হয় কফি খান","বসার সময় নেই, তাই যেতে হচ্ছে"],"a":1},{"q":"পাথুরে মূর্তি কোন ধরনের বিশেষণ?","o":["বর্ণবাচক","অবস্থাবাচক","উপাদানবাচক","গুণবাচক"],"a":2},{"q":"'অনুপম' শব্দের অর্থ 'সুন্দর'র পরিবর্তে 'অনির্বচনীয় সৌন্দর্য' গ্রহণ করলে শব্দের অর্থের কী ঘটে?","o":["সংকোচন","উন্নতি","অবনতি","বদল"],"a":1},{"q":"পূরণবাচক বিশেষণের উদাহরণ কোনটি?","o":["তিন","তৃতীয়","একশ","সেই"],"a":1},{"q":"'লুঙ্গি' কোন ভাষা থেকে আগত শব্দ?","o":["বর্মি","হিন্দি","পর্তুগিজ","ফারসি"],"a":0},{"q":"নিচের কোনটি নিত্য স্ত্রীবাচক শব্দ?","o":["সতীন","রূপসী","যোগিনী","শ্রীমতী"],"a":0},{"q":"একটি অসম্পূর্ণ বাক্যের পরে অন্য একটি বাক্যের অবতারণা করতে হলে কোন জ্যোতি চিহ্ন ব্যবহৃত হয়?","o":["কমা","কোলন","হাইফেন","সেমিকোলন"],"a":1},{"q":"নিচের কোনটি সঠিক ব্যাসবাক্য?","o":["রাজার পথ = রাজপথ","রাজার হাঁস = রাজহাঁস","গরুর গাড়ি = গরুর গাড়ি","মৃগের শিশু = মৃগশিশু"],"a":3},{"q":"\"রক্তে জিনিসটা ফেটেছে।\" — এটি কোন বাচ্যের উদাহরণ?","o":["কর্মবাচ্য","ভাববাচ্য","কর্তৃবাচ্য","কর্ম-কর্তৃবাচ্য"],"a":3},{"q":"\"মরি তো মরব\" 'তো' কোন ক্রিয়া বিশেষণের উদাহরণ?","o":["কালবাচক","ধরনবাচক","পদান্বয়ী (বা অবধারক)","নেতিবাচক"],"a":2},{"q":"'বৈশাখী' শব্দটি নাম-বিশেষণের—","o":["স্থানবাচক","কালবাচক","উপাদানবাচক","গুণবাচক"],"a":1},{"q":"প্রযোজক ক্রিয়ার সাধারণ বর্তমান কালে বক্তা পক্ষের ক্রিয়া বিভক্তি কোনটি?","o":["-আই (করাই)","-আস (করাস)","-ায় (করায়)","-আও (করাও)"],"a":0},{"q":"ধন্যাত্মক দ্বিরুক্তির উদাহরণ হচ্ছে—","o":["চটপট","ফলমূল","ফোঁসফোঁস","থকথকে"],"a":2},{"q":"'বাহ্! চমৎকার লিখেছ।'— বাক্যটিতে কোন ধরনের আবেগ আছে?","o":["প্রশংসা","আতঙ্ক","বিস্ময়","আনন্দ"],"a":0},{"q":"'সকলের মঙ্গল হোক' কোন কালের ক্রিয়া?","o":["অনুজ্ঞা বর্তমান","সাধারণ অতীত","ঘটমান বর্তমান","নিত্য অতীত"],"a":0},{"q":"'বাগার্থ' ব্যাকরণের কোন অংশের আলোচ্য বিষয়?","o":["ধ্বনিতত্ত্ব","রূপতত্ত্ব","বাক্যতত্ত্ব","অর্থতত্ত্ব"],"a":3},{"q":"কোনো কিছু দেখে বা শুনে অবাক বা বিস্মিত হলে কোন ধরনের বাক্য তৈরি হয়?","o":["অনুজ্ঞাবাচক বাক্য","আবেগবাচক বাক্য","নেতিবাচক বাক্য","প্রশ্নবাচক বাক্য"],"a":1},{"q":"সুকৃত-এর বিপরীত শব্দ কোনটি?","o":["দুষ্কৃত","নিকৃষ্ট","অবিকৃত","বহিষ্কৃত"],"a":0},{"q":"নিচের কোনটি অনুসর্গের উদাহরণ?","o":["আপন, তুমি","বলে, কয়ে","অভিমূখে, কাছে","জোরে, আস্তে"],"a":2},{"q":"অভিধানে অর্থ গ্রহণের বেলায় শব্দের কোনটিকে প্রাধান্য দেওয়া হয়?","o":["লক্ষ্যাঙ্ক","বাচ্যার্থ","গৌণার্থ","অর্থপ্রসার"],"a":1},{"q":"'অসাবধান' অর্থে নিচের কোন বাগধারাটির প্রয়োগ হয়?","o":["গড্ডলিকা প্রবাহ","থতমত খাওয়া","বর্ণচোরা","কাঁচাঢিলা"],"a":3}];
+const L=['ক','খ','গ','ঘ'];
+/* ===== MCQ exam system ===== */
+const N=MCQ.length;let ans=new Array(N).fill(-1),st='choose',flt='wrong';
+const mg=$('#mgrid');
+function card(m,i,mode){
+ return `<div class="mc" data-i="${i}"><div class="mq"><i>${bn(i+1)}</i><span>${m.q}</span></div>${m.o.map((t,j)=>{
+  let c='mo',tag='';
+  if(mode==='exam'){c+=' pick'+(ans[i]===j?' sel':'')}
+  else if(mode==='view'){if(j===m.a)c+=' ok'}
+  else{if(j===m.a){c+=' ok';tag='<em>সঠিক উত্তর</em>'}else if(j===ans[i]){c+=' bad';tag='<em>আপনার উত্তর</em>'}}
+  return `<div class="${c}" data-j="${j}"><b>${L[j]}</b><span>${t}</span>${tag}</div>`}).join('')}</div>`}
+function score(){return MCQ.reduce((s,m,i)=>s+(ans[i]===m.a?1:0),0)}
+function updBar(){const n=ans.filter(x=>x>=0).length;$('#ecnt').textContent='উত্তর দিয়েছেন: '+bn(n)+' / '+bn(N);$('#epb').style.width=n/N*100+'%'}
+function draw(){
+ if(st==='exam')mg.innerHTML=MCQ.map((m,i)=>card(m,i,'exam')).join('');
+ else if(st==='view')mg.innerHTML=MCQ.map((m,i)=>card(m,i,'view')).join('');
+ else if(st==='result'){
+  $('#rwrong').classList.toggle('on',flt==='wrong');$('#rwrong').classList.toggle('alt',flt!=='wrong');
+  $('#rall').classList.toggle('on',flt==='all');$('#rall').classList.toggle('alt',flt!=='all');
+  if(flt==='all')mg.innerHTML=MCQ.map((m,i)=>card(m,i,'view')).join('');
+  else{const w=MCQ.map((m,i)=>ans[i]!==m.a?card(m,i,'review'):'').join('');mg.innerHTML=w||'<div class="mnone">🎉 কোনো ভুল নেই! সবগুলো সঠিক হয়েছে।</div>'}}
+ else mg.innerHTML=''}
+function show(s,keepScroll){
+ st=s;$('#mchoice').hidden=s!=='choose';$('#ebar').hidden=s!=='exam';$('#mres').hidden=s!=='result';$('#mtop').hidden=s!=='view';
+ $('#msmall').textContent={choose:'',exam:'সব প্রশ্নের উত্তর দিয়ে Submit করুন',view:'সবুজ ঘরটিই সঠিক উত্তর',result:flt==='all'?'সবুজ ঘরটিই সঠিক উত্তর':'লাল = আপনার ভুল উত্তর · সবুজ = সঠিক উত্তর'}[s];
+ draw();if(!keepScroll)scrollTo({top:0})}
+function startExam(){ans=new Array(N).fill(-1);flt='wrong';updBar();show('exam')}
+mg.addEventListener('click',e=>{if(st!=='exam')return;const o=e.target.closest('.mo.pick');if(!o)return;
+ const c=o.closest('.mc'),i=+c.dataset.i,j=+o.dataset.j;ans[i]=j;c.classList.remove('miss');
+ c.querySelectorAll('.mo').forEach(x=>x.classList.toggle('sel',+x.dataset.j===j));updBar()});
+$('#bexam').onclick=startExam;$('#bexam2').onclick=startExam;$('#rre').onclick=startExam;
+$('#bview').onclick=()=>show('view');
+$('#bquit').onclick=()=>{if(confirm('পরীক্ষা বাতিল করবেন? আপনার উত্তরগুলো মুছে যাবে।')){ans=new Array(N).fill(-1);show('choose')}};
+$('#bsub').onclick=()=>{
+ const miss=ans.map((a,i)=>a<0?i:-1).filter(i=>i>=0);
+ if(miss.length){mg.querySelectorAll('.mc').forEach(c=>c.classList.toggle('miss',miss.includes(+c.dataset.i)));
+  const f=mg.querySelector('.mc.miss');if(f)f.scrollIntoView({behavior:'smooth',block:'center'});
+  alert('সবগুলো প্রশ্নের উত্তর দিতে হবে! এখনো '+bn(miss.length)+'টি বাকি আছে।');return}
+ const sc=score();$('#rsc').textContent=bn(sc);
+ $('#rmsg').textContent=sc===N?'অসাধারণ! পূর্ণ নম্বর 🎉':'সঠিক '+bn(sc)+'টি · ভুল '+bn(N-sc)+'টি';
+ flt='wrong';show('result')};
+$('#rwrong').onclick=()=>{flt='wrong';show('result',true)};
+$('#rall').onclick=()=>{flt='all';show('result',true)};
+show('choose',true);
+/* tabs */
+const tw=$('#tw'),tm=$('#tm'),pw=$('#pw'),pm=$('#pm');
+function tab(w){scrollTo({top:0});tw.classList.toggle('on',w);tm.classList.toggle('on',!w);pw.hidden=!w;pm.hidden=w}
+tw.onclick=()=>tab(true);tm.onclick=()=>tab(false);
+})();
+</script>
+</body>
+</html>
